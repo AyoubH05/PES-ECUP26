@@ -1,74 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Group Stage - EFOOTBALL CUP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFOOTBALL CUP - Group Stage</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="brand">Group Stage</h1>
-    <div class="nav-actions">
-      <a href="index.html" class="link">Home</a>
-      <a href="knockout.html" class="link">Knockout</a>
-      <button class="btn small" id="resetBtn">Reset</button>
-    </div>
+  <header>
+    <h1>Group Stage</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="groups.html" class="active">Group Stage</a>
+      <a href="tournament.html">Knockout Stage</a>
+      <button id="resetBtn" class="btn-secondary">Reset</button>
+    </nav>
   </header>
 
-  <main class="padded">
-    <!-- Controls -->
-    <section class="controls">
-      <button id="generateGroupsBtn" class="btn">Generate Groups</button>
-      <button id="generateRoundBtn" class="btn">Generate Next Round</button>
-      <span class="muted" id="roundInfo">Rounds generated: 0/3</span>
-      <button id="goKnockout" class="btn" style="display:none">Go to Knockout</button>
-    </section>
+  <main id="groups-container">
+    <div class="controls">
+      <button id="generateGroups" class="btn-primary">Generate Groups</button>
+      <button id="nextRound" class="btn-secondary">Generate Next Round</button>
+      <p id="roundStatus">Rounds generated: 0/3</p>
+    </div>
 
-    <!-- Standings (6 small tables) -->
-    <section id="standingsWrap" class="grid-3"></section>
+    <section id="groupsSection"></section>
+    <section id="matchesSection"></section>
+    <section id="playedMatchesSection"></section>
+    <section id="standingsSection"></section>
 
-    <!-- Round navigation -->
-    <section class="roundNav">
-      <button id="prevRound" class="nav-arrow">&lt;</button>
-      <div id="currentRoundLabel" class="round-label">Round 1</div>
-      <button id="nextRound" class="nav-arrow">&gt;</button>
-    </section>
-
-    <!-- Matches list (stacked) -->
-    <section id="matchesList" class="matches-list"></section>
-
-    <!-- Played matches -->
-    <section id="playedList" class="played-list">
-      <h3>Played Matches</h3>
-      <div id="playedContainer"></div>
-    </section>
+    <div class="bottom-controls">
+      <button id="goToKnockout" class="btn-primary">Go to Knockout Stage</button>
+    </div>
   </main>
 
-  <!-- Modal for entering score -->
-  <div id="scoreModal" class="modal hidden">
-    <div class="modal-card">
-      <h3 id="modalTitle">Enter score</h3>
-      <div class="score-inputs">
-        <div>
-          <div id="homeName" class="team-name"></div>
-          <input id="homeGoals" type="number" min="0" value="0" />
-        </div>
-        <div class="vs">×</div>
-        <div>
-          <div id="awayName" class="team-name"></div>
-          <input id="awayGoals" type="number" min="0" value="0" />
-        </div>
-      </div>
-      <div class="modal-actions">
-        <button id="saveScoreBtn" class="btn">Save</button>
-        <button id="cancelScoreBtn" class="btn alt">Cancel</button>
-      </div>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 EFOOTBALL CUP</p>
+  </footer>
 
+  <!-- Load teams before main logic -->
   <script src="teams.js"></script>
   <script src="script.js"></script>
-  <script src="reset.js"></script>
 </body>
 </html>
