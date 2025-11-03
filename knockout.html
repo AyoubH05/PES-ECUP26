@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Knockout Stage - EFOOTBALL CUP</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <title>Knockout - EFOOTBALL CUP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="navbar">
-    <h2>Knockout Stage</h2>
-    <button onclick="resetTournament()">Reset</button>
-  </div>
+  <header class="navbar">
+    <h1 class="brand">Knockout Stage</h1>
+    <div class="nav-actions">
+      <a href="groups.html" class="link">Groups</a>
+      <a href="index.html" class="link">Home</a>
+      <button class="btn small" id="resetBtn2">Reset</button>
+    </div>
+  </header>
 
-  <div class="knockout-container">
-    <p>The top 16 teams will appear here after group stage results.</p>
-  </div>
+  <main class="padded">
+    <section id="knockoutArea" class="knockout-area">
+      <h2>Round of 16</h2>
+      <div id="r16" class="bracket-grid"></div>
 
+      <h2>Quarterfinals</h2>
+      <div id="qf" class="bracket-grid"></div>
+
+      <h2>Semifinals</h2>
+      <div id="sf" class="bracket-grid"></div>
+
+      <h2>Final</h2>
+      <div id="final" class="bracket-grid"></div>
+    </section>
+  </main>
+
+  <script src="teams.js"></script>
+  <script src="script.js"></script>
   <script src="reset.js"></script>
 </body>
 </html>
