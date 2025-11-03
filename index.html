@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>EFOOTBALL CUP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFOOTBALL CUP - Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="brand">EFOOTBALL CUP</h1>
-    <div class="nav-actions">
-      <a href="groups.html" class="btn">Start Tournament</a>
-    </div>
+  <header>
+    <h1>EFOOTBALL CUP</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="groups.html">Group Stage</a>
+      <a href="tournament.html">Knockout Stage</a>
+      <a href="create.html">Create Tournament</a>
+    </nav>
   </header>
 
-  <main class="container home">
-    <h2>Welcome to EFOOTBALL CUP</h2>
-    <p>24 teams — 6 groups × 4 — top 2 + best 4 thirds → Round of 16</p>
-    <div class="home-actions">
-      <a href="groups.html" class="big-btn">Go to Group Stage</a>
-    </div>
-    <footer>
-      <small>Built for testing — results saved locally (LocalStorage).</small>
-    </footer>
+  <main>
+    <section class="intro">
+      <h2>Welcome to the EFOOTBALL CUP!</h2>
+      <p>Manage your own football tournament — create teams, organize matches, and track results!</p>
+      <button onclick="window.location.href='groups.html'" class="btn-primary">Start Tournament</button>
+    </section>
   </main>
+
+  <footer>
+    <p>© 2025 EFOOTBALL CUP. All rights reserved.</p>
+  </footer>
+
+  <!-- Load teams then main script -->
+  <script src="teams.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
