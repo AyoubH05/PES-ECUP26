@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <title>EFOOTBALL CUP</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container home">
-    <h1>EFOOTBALL CUP</h1>
-    <p>Welcome to your custom football tournament!</p>
-    <button onclick="window.location.href='groups.html'">Start Tournament</button>
-  </div>
+  <header class="navbar">
+    <h1 class="brand">EFOOTBALL CUP</h1>
+    <div class="nav-actions">
+      <a href="groups.html" class="btn">Start Tournament</a>
+    </div>
+  </header>
+
+  <main class="container home">
+    <h2>Welcome to EFOOTBALL CUP</h2>
+    <p>24 teams — 6 groups × 4 — top 2 + best 4 thirds → Round of 16</p>
+    <div class="home-actions">
+      <a href="groups.html" class="big-btn">Go to Group Stage</a>
+    </div>
+    <footer>
+      <small>Built for testing — results saved locally (LocalStorage).</small>
+    </footer>
+  </main>
 </body>
 </html>
